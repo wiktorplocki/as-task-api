@@ -15,7 +15,6 @@ function aggregate(req, res) {
         res.status(500).json({ error: err });
       }
       res.status(200).json(order);
-      console.log(order);
     }
   );
 }
