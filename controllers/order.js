@@ -54,18 +54,6 @@ function getByClientId(req, res) {
     .catch(err => res.status(500).json({ error: err }));
 }
 
-// function get(req, res) {
-//   Order.findById(req.params.id).exec((err, order) => {
-//     if (err) {
-//       res.status(400).json(err);
-//     }
-//     if (!order) {
-//       res.status(404).json({ error: `Order ID ${req.params.id} not found!` });
-//     }
-//     res.status(200).json(order);
-//   });
-// }
-
 function create(req, res) {
   const order = new Order({
     _id: mongoose.Types.ObjectId(),
